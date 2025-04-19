@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0d0d0d;
+    color: #ccd6f6;
+}
+
+#header{
+    width:100%;
+    height: 100vh;
+    background-image: url(Images/Meteor.svg); 
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container{
+    padding: 10px 3%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;    
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ccd6f6;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #ccd6f6;
+}
+
+/* ----------ABOUT---------*/
+#about {
+    padding: 80px 20px; /* vertical + horizontal padding */
+    color: #ababab;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto; /* <-- THIS ensures equal spacing left & right */
+}
+
+.about-col-1 {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 45px;
+}
+
+.about-col-2 {
+    flex: 1 1 50%;
+    max-width: 700px;
+}
+
+.sub-title {
+    font-size: 70px;
+    font-weight: 600;
+    color: #ccd6f6;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ababab;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #ccd6f6;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*--------services-----------*/
+#services {
+    padding: 30px 0;
+    text-align: center; /* optional: center-align section titles */
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin: 50px auto 0 auto; /* top margin + center horizontally */
+    max-width: 1000px;         /* constrains width for a centered layout */
+    padding: 0 20px;           /* horizontal padding for responsiveness */
+}
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background: #1a1a1a;
+    transform: translateY(-10px);
+}
+
+
+/*portfolio*/
+
+#portfolio{
+    padding: 75px 0;
+
+}
