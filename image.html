@@ -1,3 +1,6 @@
+
+<!------------------------------------------START------------------------------------------>
+
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -13,22 +16,38 @@
     <div class="container">
         <nav>
             <img src="Images/logo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
-        <div class="header-text">
-            <p>Computer Engineer</p>
-            <h1><span>JAMES</span> KIM</h1>
+        <div class="hero-content">
+            <div class="headshot-wrapper">
+                <img src="Images/circle headshot.png" class="hs1" alt="James Kim">
+            </div>
+            <div class="header-text">
+                <p>Hello, I'm</p>
+                <h1><span>James</span> Kim</h1>
+                <h2><span class="typewriter"></span></h2>
+                <div class="header-buttons">
+                    <a href="Images/resume25.pdf" download class="btn light">Download CV</a>
+                    <a href="#contact" class="btn dark">Contact Info</a>
+                </div>
+                <div class="social-icons2">
+                    <a href="https://www.linkedin.com/in/james-kim-1095a2297/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/jvmeskim"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<!---------ABOUT--------->
+
+<!------------------------------------------ABOUT------------------------------------------>
+
 <div id="about">
     <div class="container"></div>
         <div class="row">
@@ -75,34 +94,100 @@
             </div>
         </div>
 </div>
-<!----------Services----------->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-              <i class="fa-solid fa-database"></i>
-              <h2>Data Analysis</h2>
-              <p>This is the thing for the data thing, idk bro</p> 
-              <a href="#">Learn More</a> 
-            </div>
-            <div>
-                <i class="fa-solid fa-robot"></i>
-                <h2>AI ML</h2>
-                <p>This is the thing for the data thing, idk bro</p> 
-                <a href="#">Learn More</a> 
-              </div>
-              <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Video Editing</h2>
-                <p>This is the thing for the data thing, idk bro</p> 
-                <a href="#">Learn More</a> 
-              </div>
-             
-        </div>
-</div>
+<!-------------------------------------------Skills-------------------------------------------->
 
-<!-- ------- Portfolio -------- -->
+<!--
+
+NOTE: Added All Skills Twice for Infinite Scroll Effect
+
+-->
+
+<div id="skills">
+    <div class="container">
+      <h1 class="sub-title">My Skills</h1>
+  
+      <div class="skills-carousel-wrapper">
+        <div class="skills-carousel">
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-database"></i>
+            <h2>Data Analysis</h2>
+            <p>Python, SQL, PowerBI</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-robot"></i>
+            <h2>AI / ML</h2>
+            <p>Scikit-learn, TensorFlow</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-code"></i>
+            <h2>Video Editing</h2>
+            <p>Adobe Premiere, DaVinci</p>
+          </div>
+  
+          <!-- NEW SKILLS -->
+          <div class="skill-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h2>Networking</h2>
+            <p>Wireshark, TCP/IP, Firewalls</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-terminal"></i>
+            <h2>Linux</h2>
+            <p>Bash, Shell, Cronjobs</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-brain"></i>
+            <h2>Prompt Design</h2>
+            <p>LLM Evaluation, AI Optimization</p>
+          </div>
+          <div class="skill-card">
+            <i class="fa-solid fa-database"></i>
+            <h2>Data Analysis</h2>
+            <p>Python, SQL, PowerBI</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-robot"></i>
+            <h2>AI / ML</h2>
+            <p>Scikit-learn, TensorFlow</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-code"></i>
+            <h2>Video Editing</h2>
+            <p>Adobe Premiere, DaVinci</p>
+          </div>
+  
+          <!-- NEW SKILLS -->
+          <div class="skill-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h2>Networking</h2>
+            <p>Wireshark, TCP/IP, Firewalls</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-terminal"></i>
+            <h2>Linux</h2>
+            <p>Bash, Shell, Cronjobs</p>
+          </div>
+  
+          <div class="skill-card">
+            <i class="fa-solid fa-brain"></i>
+            <h2>Prompt Design</h2>
+            <p>LLM Evaluation, AI Optimization</p>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!------------------------------------------ Portfolio ------------------------------------------->
 <div id="portfolio">
     <div class="container">
       <h1 class="sub-title">My Work</h1>
@@ -143,9 +228,9 @@
     </div>
   </div>
 
-  <!----------CONTACT FORM----------->
+  <!-------------------------------------------CONTACT FORM-------------------------------------------->
 
-<div id="content">
+<div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -156,22 +241,27 @@
                     <a href="https://www.linkedin.com/in/james-kim-1095a2297/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/jvmeskim"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="Images/resume25.pdf" download class="btn btn2">Download Resume (CV)</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type ="text" name="Name" placeholder="Your Name" required>
                     <input type ="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit">Submit </button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
     <div class="copyright">
-        <p>© 2025 James Kim. All rights reserved. </p>
+        <p>Copyright © 2025 James Kim. All Rights Reserved. </p>
     </div>
 </div>
+
+  <!-------------------------------------------SCRIPTS-------------------------------------------->
+
+
+  <!--------Start Interactive Tabs---------->
 <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
@@ -189,5 +279,106 @@
     }
 
 </script>
+
+  <!--------End Interactive Tabs---------->
+
+
+  <!--------Start Side Menu Animation---------->
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openMenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closeMenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<!--------End Side Menu Animation---------->
+
+  
+<!--------Start of Google Sheet Uploader---------->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwkela_SC6F1uHulHpWyiSwE1hgjBDxLMrwRkqqf9QbnePMOH8CsEVKyMNTIArfGrLlDw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully. Thank you!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<!--------End of Google Sheet Uploader---------->
+
+
+<!--------Start Title Typewriter Animation---------->
+<script>
+    const roles = ["Computer Engineer", "Data Analyst/Engineer", "AI/ML", "Software Developer"];
+    const el = document.querySelector('.typewriter');
+  
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+  
+    function typeLoop() {
+      const current = roles[wordIndex];
+      const currentText = isDeleting
+        ? current.substring(0, charIndex--)
+        : current.substring(0, charIndex++);
+  
+      el.innerHTML = currentText;
+  
+      if (!isDeleting && charIndex === current.length + 1) {
+        isDeleting = true;
+        typingSpeed = 1000; // pause before deleting
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % roles.length;
+        typingSpeed = 200;
+      } else {
+        typingSpeed = isDeleting ? 50 : 100;
+      }
+  
+      setTimeout(typeLoop, typingSpeed);
+    }
+  
+    typeLoop();
+  </script>
+
+<!--------End Title Typewriter Animation---------->
+
+<!--------Start Skills Scroll Animation---------->
+  <script>
+    const skillsTrack = document.getElementById("skills-track");
+    const cards = Array.from(skillsTrack.children);
+  
+    // Clone and append each card for seamless loop
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      skillsTrack.appendChild(clone);
+    });
+  
+    // Set track width dynamically
+    const totalCards = skillsTrack.children.length;
+    const cardWidth = cards[0].offsetWidth + 40; // + gap (match your CSS gap)
+    skillsTrack.style.width = `${totalCards * cardWidth}px`;
+  </script>
+  
+<!--------End Skills Scroll Animation---------->
+
 </body>
 </html>
