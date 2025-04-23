@@ -1,99 +1,128 @@
 
 <!------------------------------------------START------------------------------------------>
-
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/3931a36242.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/3931a36242.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<!-- Fixed Navigation Bar -->
+<nav>
+  <img src="Images/logo.png" class="logo" alt="Logo" />
+  <ul id="sidemenu">
+    <li><a href="#header">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+  </ul>
+  <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+</nav>
+
+<!-- Hero Section -->
 <div id="header">
-    <div class="container">
-        <nav>
-            <img src="Images/logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
-        </nav>
-        <div class="hero-content">
-            <div class="headshot-wrapper">
-                <img src="Images/circle headshot.png" class="hs1" alt="James Kim">
-            </div>
-            <div class="header-text">
-                <p>Hello, I'm</p>
-                <h1><span>James</span> Kim</h1>
-                <h2><span class="typewriter"></span></h2>
-                <div class="header-buttons">
-                    <a href="Images/resume25.pdf" download class="btn light">Download CV</a>
-                    <a href="#contact" class="btn dark">Contact Info</a>
-                </div>
-                <div class="social-icons2">
-                    <a href="https://www.linkedin.com/in/james-kim-1095a2297/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/jvmeskim"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-        </div>
+  <div class="hero-content">
+    <div class="headshot-wrapper">
+      <img src="Images/circle headshot.png" class="hs1" alt="James Kim" />
+    </div>
+    <div class="header-text">
+      <p>Hello, I'm</p>
+      <h1><span>James</span> Kim</h1>
+      <h2>Data Scientist</h2>
+      <div class="spacer"></div>
+      <p class="location">
+        <i class="fa-solid fa-location-dot"></i> Apollo Beach, FL
+      </p>
+      <div class="spacer2"></div>
+      <div class="header-buttons">
+        <a href="Images/resume25.pdf" download class="btn light" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <a href="#contact" class="btn dark">Contact Info</a>
+      </div>
+      <div class="social-icons2">
+        <a href="https://www.linkedin.com/in/james-kim-1095a2297/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/jvmeskim" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!------------------------------------------ABOUT------------------------------------------>
 
 <div id="about">
-    <div class="container"></div>
-        <div class="row">
-            <div class="about-col-1">
-                <img src="Images/headshotcompressed.png">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Innovative and analytical Computer Engineer with a strong foundation in software development, data analysis, and machine learning. Proficient in Python, C++, C, and SQL, 
-                    with experience in data structures, statistical analysis, and AI model evaluation. Skilled in data processing, algorithm optimization, and AI-driven insights generation. 
-                    Adept at problem-solving, collaborating on technical projects, and leveraging analytical skills to extract meaningful insights from complex datasets. Highly motivated to 
-                    contribute to software development, AI, and data-driven decision-making within a forward-thinking organization.</p>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Data Analysis</span><br>SQL, Python, PowerBI</li>
-                            <li><span>AI End to End</span><br>Python enter more mlater</li>
-                            <li><span>SKill 3</span><br>Enter More Later Placeholder</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2024 - Current</span><br>AI Prompt Engineer at TELUS Digital AI Solutions</li>
-                            <li><span>2024 - 2025</span><br>Software Developer - AI Training at Outlier</li>
-                            <li><span></span><br></li>
-
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Aug 2020 - May 2025</span><br>B.S. Computer Engineering at Florida State University
-                            Minor: Mathematics</li>
-                            <li><span></span><br></li>
-                            <li><span></span><br></li>
-                            
-                        </ul>
-                    </div>
-            </div>
+  <div class="container">
+    <h1 class="sub-title">Profile</h1>
+    <div class="about-box">
+      <div class="about-column about-left">
+        <div class="section-block">
+          <h3>About Me</h3>
+          <p>
+            Computer Engineer focused on AI, software, and data analytics. I enjoy building efficient systems, optimizing AI performance, and creating meaningful user experiences. Always learning — always building.
+          </p>
         </div>
+      
+        <div class="section-block">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              <span>Aug 2020 - May 2025</span><br>
+              B.S. Computer Engineering, Florida State University<br>
+              Minor: Mathematics
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+
+      <div class="about-column about-right">
+        <div class="section-block">
+          <h3>Experience</h3>
+
+          <div class="job-block">
+            <h4>AI Data Analyst – TELUS Digital AI Solutions</h4>
+            <span class="job-date">Jul 2024 – Present · 10 mos</span>
+            <ul>
+              <li>Reviewed AI-generated code, text, and images for accuracy and quality.</li>
+              <li>Evaluated and improved code efficiency by identifying enhancement opportunities.</li>
+              <li>Summarized research and analysis clearly for management review.</li>
+            </ul>
+            <div class="skills-tags">
+              <span>Python</span>
+              <span>AI Evaluation</span>
+              <span>Microsoft Office</span>
+            </div>
+          </div>
+
+          <div class="job-block">
+            <h4>Software Developer AI Training - Outlier </h4>
+            <span class="job-date">May 2024 – Apr 2025 · 1 yr</span>
+            <ul>
+              <li>Optimized AI-generated code across Python, C, C++, SQL, and Assembly.</li>
+              <li>Collaborated across teams to troubleshoot and refine AI models.</li>
+              <li>Provided detailed, constructive feedback to improve AI response quality.</li>
+            </ul>
+            <div class="skills-tags">
+              <span>Assembly</span>
+              <span>C++</span>
+              <span>AI Prompting</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 <!-------------------------------------------Skills-------------------------------------------->
 
 <!--
@@ -103,89 +132,113 @@ NOTE: Added All Skills Twice for Infinite Scroll Effect
 -->
 
 <div id="skills">
-    <div class="container">
-      <h1 class="sub-title">My Skills</h1>
-  
-      <div class="skills-carousel-wrapper">
-        <div class="skills-carousel">
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-database"></i>
-            <h2>Data Analysis</h2>
-            <p>Python, SQL, PowerBI</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-robot"></i>
-            <h2>AI / ML</h2>
-            <p>Scikit-learn, TensorFlow</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-code"></i>
-            <h2>Video Editing</h2>
-            <p>Adobe Premiere, DaVinci</p>
-          </div>
-  
-          <!-- NEW SKILLS -->
-          <div class="skill-card">
-            <i class="fa-solid fa-network-wired"></i>
-            <h2>Networking</h2>
-            <p>Wireshark, TCP/IP, Firewalls</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-terminal"></i>
-            <h2>Linux</h2>
-            <p>Bash, Shell, Cronjobs</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-brain"></i>
-            <h2>Prompt Design</h2>
-            <p>LLM Evaluation, AI Optimization</p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-solid fa-database"></i>
-            <h2>Data Analysis</h2>
-            <p>Python, SQL, PowerBI</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-robot"></i>
-            <h2>AI / ML</h2>
-            <p>Scikit-learn, TensorFlow</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-code"></i>
-            <h2>Video Editing</h2>
-            <p>Adobe Premiere, DaVinci</p>
-          </div>
-  
-          <!-- NEW SKILLS -->
-          <div class="skill-card">
-            <i class="fa-solid fa-network-wired"></i>
-            <h2>Networking</h2>
-            <p>Wireshark, TCP/IP, Firewalls</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-terminal"></i>
-            <h2>Linux</h2>
-            <p>Bash, Shell, Cronjobs</p>
-          </div>
-  
-          <div class="skill-card">
-            <i class="fa-solid fa-brain"></i>
-            <h2>Prompt Design</h2>
-            <p>LLM Evaluation, AI Optimization</p>
-          </div>
-  
+  <div class="container">
+    <h1 class="sub-title">My Skills</h1>
+
+    <div class="skills-strip-container">
+      <div class="skills-track">
+
+        <!-- Languages -->
+        <div class="skill-icon">
+          <img src="Icons/python.svg" alt="Python">
+          <span>Python</span>
         </div>
+        <div class="skill-icon">
+          <img src="Icons/c-plusplus.svg" alt="C++">
+          <span>C++</span>
+        </div>
+
+        <!-- Libraries -->
+        <div class="skill-icon">
+          <img src="Icons/numpy.svg" alt="NumPy">
+          <span>NumPy</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/pandas-icon.svg" alt="Pandas">
+          <span>Pandas</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/tensorflow.svg" alt="TensorFlow">
+          <span>TensorFlow</span>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-icon">
+          <img src="Icons/mysql-icon.svg" alt="MySQL">
+          <span>MySQL</span>
+        </div>
+
+        <!-- Data Visualization -->
+        <div class="skill-icon">
+          <img src="Icons/tableau-icon.svg" alt="Tableau">
+          <span>Tableau</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/microsoft-power-bi.svg" alt="Power BI">
+          <span>Power BI</span>
+        </div>
+
+        <!-- Dev Tools -->
+        <div class="skill-icon">
+          <img src="Icons/git-icon.svg" alt="Git">
+          <span>Git</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/adobe-photoshop.svg" alt="Photoshop">
+          <span>Photoshop</span>
+        </div>
+
+        <!-- Duplicate for infinite scroll -->
+        <div class="skill-icon">
+          <img src="Icons/python.svg" alt="Python">
+          <span>Python</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/c-plusplus.svg" alt="C++">
+          <span>C++</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/numpy.svg" alt="NumPy">
+          <span>NumPy</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/pandas-icon.svg" alt="Pandas">
+          <span>Pandas</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/tensorflow.svg" alt="TensorFlow">
+          <span>TensorFlow</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/mysql-icon.svg" alt="MySQL">
+          <span>SQL</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/tableau-icon.svg" alt="Tableau">
+          <span>Tableau</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/microsoft-power-bi.svg" alt="Power BI">
+          <span>Power BI</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/git-icon.svg" alt="Git">
+          <span>Git</span>
+        </div>
+        <div class="skill-icon">
+          <img src="Icons/adobe-photoshop.svg" alt="Photoshop">
+          <span>Photoshop</span>
+        </div>
+
       </div>
     </div>
   </div>
+</div>
+
+
+
+
+
 
 <!------------------------------------------ Portfolio ------------------------------------------->
 <div id="portfolio">
@@ -194,21 +247,19 @@ NOTE: Added All Skills Twice for Infinite Scroll Effect
       <div class="work-list">
         
         <div class="work">
-          <img src="Images/sideview.png" alt="Side View">
+          <img src="Images/WIP.png" alt="Side View">
           <div class="layer">
-            <h3>Side View of HPM</h3>
-            <p>This is the side view of our Home Power Monitor
-                project with Talquin EC</p>
+            <h3>Project #1</h3>
+            <p>Work in progess...</p>
                 <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
   
         <div class="work">
-          <img src="Images/topdown.png" alt="Top Down">
+          <img src="Images/WIP.png" alt="Top Down">
           <div class="layer">
-            <h3>Top Down View of HPM</h3>
-            <p>This is the top down view of our Home Power Monitor
-                project with Talquin EC</p>
+            <h3>Project #2</h3>
+            <p>Work in Progress...</p>
                 <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
@@ -216,10 +267,9 @@ NOTE: Added All Skills Twice for Infinite Scroll Effect
         <div class="work">
           <img src="Images/mainproduct.png" alt="Main Product">
           <div class="layer">
-            <h3>Main View of HPM</h3>
-            <p>This is the main view of our Home Power Monitor
-                project with Talquin EC</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <h3>Talquin Home Power Monitor</h3>
+            <p>Built a power monitoring system with Raspberry Pi and sensors, displaying real-time energy usage per room via a custom web dashboard using HTML, CSS, JavaScript, PHP, SQL, and Python.</p>
+                <a href="#"target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
   
@@ -230,33 +280,139 @@ NOTE: Added All Skills Twice for Infinite Scroll Effect
 
   <!-------------------------------------------CONTACT FORM-------------------------------------------->
 
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i> jvmeskim@gmail.com</p>
-                <p><i class="fa-solid fa-phone-volume"></i> (813)-957-4081</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/james-kim-1095a2297/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/jvmeskim"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type ="text" name="Name" placeholder="Your Name" required>
-                    <input type ="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit">Submit </button>
-                </form>
-                <span id="msg"></span>
-            </div>
+  <div id="contact">
+    <div class="container contact-container">
+      <div class="contact-left">
+        <p class="contact-heading">Contact</p>
+        <h1 class="contact-title">Open to collaboration, <br>conversation, 
+          <span>and new</span> opportunities!</h1>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope"></i> jvmeskim@gmail.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> Apollo Beach, FL</p>
         </div>
+        <div class="social-icons">
+          <a href="https://github.com/jvmeskim"target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/james-kim-1095a2297/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your name" required />
+          <input type="email" name="Email" placeholder="Your email" required />
+          <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <span id="msg"></span>
+      </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © 2025 James Kim. All Rights Reserved. </p>
-    </div>
-</div>
+    <footer class="copyright">
+      <p>Copyright © 2025 James Kim. All Rights Reserved.</p>
+    </footer>
+    
+  </div>
+  
+  <style>
+    #contact {
+      padding: 80px 0;
+      background: #0d0d0d;
+    }
+  
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 40px;
+      border-radius: 12px;
+      background: #1a1a1a;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+  
+    .contact-left {
+      flex: 1;
+      min-width: 300px;
+    }
+  
+    .contact-heading {
+      color: #00bfff;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .contact-title {
+      font-size: 36px;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+  
+    .contact-title span {
+      color: #00bfff;
+    }
+  
+    .contact-info {
+      margin: 20px 0;
+    }
+  
+    .contact-info p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .social-icons a {
+      font-size: 22px;
+      color: #fff;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+  
+    .social-icons a:hover {
+      color: #7289da;
+    }
+  
+    .contact-right {
+      flex: 1;
+      min-width: 300px;
+      background: linear-gradient(145deg, #101010, #181818);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: inset 0 0 10px #222;
+    }
+  
+    .contact-right form input,
+    .contact-right form textarea {
+      width: 100%;
+      background: transparent;
+      border: 1px solid #4b4b4b;
+      color: #fff;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+  
+    .contact-right form button {
+      width: 100%;
+      background: #00bfff;;
+      border: none;
+      padding: 14px;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+  
+    .contact-right form button:hover {
+      background: #00bfff;;
+    }
+  </style>
+  
 
   <!-------------------------------------------SCRIPTS-------------------------------------------->
 
@@ -324,7 +480,7 @@ NOTE: Added All Skills Twice for Infinite Scroll Effect
 <!--------End of Google Sheet Uploader---------->
 
 
-<!--------Start Title Typewriter Animation---------->
+<!--------Start Title Typewriter Animation---------
 <script>
     const roles = ["Computer Engineer", "Data Analyst/Engineer", "AI/ML", "Software Developer"];
     const el = document.querySelector('.typewriter');
@@ -359,24 +515,35 @@ NOTE: Added All Skills Twice for Infinite Scroll Effect
     typeLoop();
   </script>
 
-<!--------End Title Typewriter Animation---------->
+--------End Title Typewriter Animation---------->
 
 <!--------Start Skills Scroll Animation---------->
-  <script>
-    const skillsTrack = document.getElementById("skills-track");
-    const cards = Array.from(skillsTrack.children);
-  
-    // Clone and append each card for seamless loop
-    cards.forEach(card => {
-      const clone = card.cloneNode(true);
-      skillsTrack.appendChild(clone);
-    });
-  
-    // Set track width dynamically
-    const totalCards = skillsTrack.children.length;
-    const cardWidth = cards[0].offsetWidth + 40; // + gap (match your CSS gap)
-    skillsTrack.style.width = `${totalCards * cardWidth}px`;
-  </script>
+<script>
+  const scrollContainer = document.getElementById("skillsAutoScroll");
+
+  let scrollAmount = 0;
+  let direction = 1;
+
+  function autoScroll() {
+    if (!scrollContainer) return;
+
+    scrollAmount += direction * 0.5; // scroll speed
+    scrollContainer.scrollLeft = scrollAmount;
+
+    // bounce at ends
+    if (
+      scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth ||
+      scrollAmount <= 0
+    ) {
+      direction *= -1;
+    }
+
+    requestAnimationFrame(autoScroll);
+  }
+
+  requestAnimationFrame(autoScroll);
+</script>
+
   
 <!--------End Skills Scroll Animation---------->
 
