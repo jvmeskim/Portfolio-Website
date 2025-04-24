@@ -21,21 +21,24 @@ html, body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0; /* Reset this if it had 10px 3% padding */
+    padding: 0; 
   }
 
 /* =================== NAVIGATION =================== */
 
 nav {
-    width: 100%;
-    padding: 30px 60px 0; /* Top + left/right padding (adjust to your liking) */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 10;
-    background: transparent; /* Keep it clean or use a background if desired */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 20px 5%;
+  background: #0d0d0d;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto; /* ensure nav always responds to clicks */
+}
 
 
 
@@ -73,6 +76,10 @@ nav ul li a::after {
   transition: 0.5s;
 }
 
+nav ul li a:hover {
+  color: #00bfff;
+}
+
 nav ul li a:hover::after {
   width: 100%;
 }
@@ -99,7 +106,7 @@ nav ul li a:hover::after {
   margin-top: 0;
   padding: 160px 20px 100px; 
   text-align: center;
-  margin-top: -40px; /* Add space below nav bar */
+  margin-top: 35px; /* Add space below nav bar */
 }
 
 .headshot-wrapper img.hs1 {
@@ -134,7 +141,9 @@ nav ul li a:hover::after {
     margin-top: 1px;;
     margin-bottom: -10px; 
     color: #e2e8f0;
+
   }
+
   
   .header-text h2 {
     font-size: 24px;
@@ -369,7 +378,7 @@ nav ul li a:hover::after {
 
 /*--------skills-----------*/
 #skills {
-    padding: 60px 0;
+    padding: 90px 0;
     text-align: center;
   }
   
@@ -730,63 +739,136 @@ nav ul li a:hover::after {
   
 
 /*--------- CSS For Mobile-------------*/
-nav .fa-solid{
-    display: none;
+nav .fa-bars,
+nav .fa-xmark {
+  display: none;
 }
 
-@media only screen and (max-width: 600px){
- #header{
-    background-image: url(); 
- }   
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav .fa-solid{
-        display: block;
-        font-size: 25px;
-        color: #fff;
-        
-    }
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #0d0d0d;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    nav ul{
-        background: #ccd6f6;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 40px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
+  .logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ccd6f6;
+  }
 
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-
-    .header-text{
-        font-size: 35px;
-    }
-
-    .copyright{
-        font-size: 40px;
-    }
-}
-
-#msg{
-    color: #61b572;
-    margin-top: 0px;
+  nav .fa-solid {
     display: block;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  nav ul {
+    background: #1a1a1a;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 160px; /* smaller sidebar */
+    height: 100vh;
+    padding-top: 60px;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+
+  nav ul li {
+    margin: 18px 0;
+    text-align: center;
+  }
+
+  nav ul .fa-xmark {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  #sidemenu.open {
+    right: 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    padding: 140px 20px 60px;
+  }
+
+  .headshot-wrapper img.hs1 {
+    width: 180px;
+    margin-top: 40px;
+    margin-bottom: -50px;
+  }
+
+  .header-text {
+    margin-top: 0;
+    font-size: 14px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+    margin-bottom: -10px;
+  }
+
+  .header-text h2 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .location {
+    font-size: 13px;
+    margin: 10px 0;
+    
+  }
+
+  .header-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-size: 11px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    min-width: 120px;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
+  .social-icons2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icons2 a {
+    font-size: 24px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+  }
 }
