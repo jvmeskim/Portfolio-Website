@@ -87,6 +87,7 @@ nav ul li a:hover::after {
     position: relative;
   }
 
+
 .hero-content {
   display: flex;
   justify-content: center;
@@ -95,15 +96,18 @@ nav ul li a:hover::after {
   gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 20px 180px; /* Top padding increased */
+  margin-top: 0;
+  padding: 160px 20px 100px; 
   text-align: center;
-  margin-top: 60px; /* Add space below nav bar */
+  margin-top: -40px; /* Add space below nav bar */
 }
 
 .headshot-wrapper img.hs1 {
   width: 300px;
   border-radius: 50%;
   box-shadow: 0 5px 30px rgba(114, 137, 218, 0.4);
+  margin-bottom: -70px; 
+
 }
 
 .header-text {
@@ -119,27 +123,30 @@ nav ul li a:hover::after {
   
   .header-text p {
     font-size: 18px;
-    margin-bottom: -17px; /* space between "Hello, I'm" and name */
+    margin-top: 80px;
+    margin-bottom: -17px; 
     color: #ccd6f6;
   }
   
   .header-text h1 {
     font-size: 65px;
     font-weight: 700;
-    margin: 0 0 -10px 0; /* space below h1 */
+    margin-top: 1px;;
+    margin-bottom: -10px; 
     color: #e2e8f0;
   }
   
   .header-text h2 {
     font-size: 24px;
     font-weight: 500;
-    margin: 0 0 10px 0; /* space below h2 */
+    margin-top: 4px; 
+    margin-bottom: 4px;
     color: #aaa;
   }
   
   .header-text .location {
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: -50px;
     font-size: 14px;
     color: #aaa;
   }
@@ -148,7 +155,7 @@ nav ul li a:hover::after {
     display: flex;
     gap: 12px;
     justify-content: center;
-    margin: 10px 0; /* space above/below buttons */
+    margin: -40px 0px; 
   }
   
   .social-icons2 {
@@ -273,6 +280,11 @@ nav ul li a:hover::after {
     font-size: 15px;
     color: #ccc;
   }
+
+  .section-block ul li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
   
   .section-block ul li span {
     display: block;
@@ -342,6 +354,13 @@ nav ul li a:hover::after {
   .skills-tags span:hover {
     background: #00bfff;
     color: #0d0d0d;
+  }
+
+  .about-left, .about-right {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
   }
   
   
@@ -428,9 +447,9 @@ nav ul li a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
-    margin: 10px auto 0 auto; /* top margin + center horizontally */
-    max-width: 1000px;         /* constrains width for a centered layout */
-    padding: 0 20px;           /* horizontal padding for responsiveness */ 
+    margin: 10px auto 0 auto; 
+    max-width: 1000px;         
+    padding: 0 20px;          
 }
 
 .work {
@@ -487,7 +506,7 @@ nav ul li a:hover::after {
     transform: translateY(10px);
   }
   
-  /* Add hover trigger here */
+
   .work:hover .layer h3 {
     animation: flickerIn 0.9s forwards;
     animation-delay: 0.1s;
@@ -540,7 +559,7 @@ nav ul li a:hover::after {
 
 .work:hover img {
     transform: scale(1.05);
-    filter: brightness(1.1); /* Slight glow */
+    filter: brightness(1.1); 
   }
   
 
@@ -591,9 +610,9 @@ nav ul li a:hover::after {
     background: #0d0d0d;
   }
   
- /* Match Contact Container to Skills Section */
+
 .contact-container {
-    max-width: 1100px; /* Match skills or about section */
+    max-width: 1100px; 
     margin: 0 auto;
     padding: 40px 30px;
     border-radius: 12px;
@@ -602,7 +621,7 @@ nav ul li a:hover::after {
     flex-wrap: wrap;
     gap: 40px;
     justify-content: space-between;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Optional, matches your card style */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
   }
   
   
@@ -678,7 +697,7 @@ nav ul li a:hover::after {
   
   .contact-right form button {
     width: 100%;
-    background: #ccd6f6; /* Theme-matching blurple */
+    background: #ccd6f6;
     border: none;
     padding: 14px;
     color: #fff;
@@ -717,7 +736,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
  #header{
-    background-image: url(); /*insert URL*/
+    background-image: url(); 
  }   
     .header-text{
         margin-top: 100%;
